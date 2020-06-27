@@ -4,35 +4,19 @@
 
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
-    <span class="logo" routerLink="/">Library</span>
+    <span class="logo" routerLink="/">Infobase</span>
 
     <span class="fill-space"></span>
-
-    <button mat-icon-button class="ml-xs overflow-visible" [matMenuTriggerFor]="userSettings">
-        <mat-icon>account_circle</mat-icon>
-    </button>
-
-    <mat-menu #userSettings="matMenu" xPosition="before">
-        <a routerLink="/login">
-            <mat-icon>power_settings_new</mat-icon>
-            <span>Log In</span>
-        </a>
-        <br>
-        <a routerLink="/admin/new">
-            <mat-icon>power_settings_new</mat-icon>
-            <span>New</span>
-        </a>
-    </mat-menu>
 
 </mat-toolbar>
 
 <!-- SIDENAV -->
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container class="sidenav-container" [hasBackdrop]="false">
 
-    <mat-sidenav #drawer class="sidenav">
+    <mat-sidenav #drawer class="sidenav" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'push' : 'side'" [opened]="(isHandset$ | async) ? 'false' : 'true'">
 
-        <!-- Accordian link list -->
-        <!-- <app-accordion-menu></app-accordion-menu> -->
+        <app-side-menu></app-side-menu>
 
     </mat-sidenav>
     <mat-sidenav-content>

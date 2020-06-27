@@ -19,6 +19,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
+import { SideMenuComponent } from './shell/side-menu/side-menu.component';
 
 const components = [
   ShellComponent
@@ -48,7 +49,8 @@ const matModules = [
 ];
 @NgModule({
   declarations: [
-    ...components
+    ...components,
+    SideMenuComponent
   ],
   imports: [
     ...matModules
