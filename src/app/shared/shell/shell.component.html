@@ -1,0 +1,43 @@
+<!-- TOP TOOLBAR-->
+<mat-toolbar color="primary">
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <span class="logo" routerLink="/">Library</span>
+
+    <span class="fill-space"></span>
+
+    <button mat-icon-button class="ml-xs overflow-visible" [matMenuTriggerFor]="userSettings">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+
+    <mat-menu #userSettings="matMenu" xPosition="before">
+        <a routerLink="/login">
+            <mat-icon>power_settings_new</mat-icon>
+            <span>Log In</span>
+        </a>
+        <br>
+        <a routerLink="/admin/new">
+            <mat-icon>power_settings_new</mat-icon>
+            <span>New</span>
+        </a>
+    </mat-menu>
+
+</mat-toolbar>
+
+<!-- SIDENAV -->
+<mat-sidenav-container class="sidenav-container">
+
+    <mat-sidenav #drawer class="sidenav">
+
+        <!-- Accordian link list -->
+        <!-- <app-accordion-menu></app-accordion-menu> -->
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <!-- TRANSCLUSION -->
+        <ng-content></ng-content>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
