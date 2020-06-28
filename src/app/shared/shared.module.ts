@@ -20,6 +20,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { SideMenuComponent } from './shell/side-menu/side-menu.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const components = [
   ShellComponent
@@ -28,7 +29,7 @@ const components = [
 const matModules = [
   CommonModule,
   RouterModule,
-
+  FlexLayoutModule,
   MatToolbarModule,
   MatIconModule,
   LayoutModule,

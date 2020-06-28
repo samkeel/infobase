@@ -14,7 +14,7 @@ export class SideMenuComponent implements OnInit {
   ngOnInit(): void {
     this.menulinks = [
       new Menulink(1, "menu item 1", "/"),
-      new Menulink(2, "menu item 2", "/main/todo"),
+      new Menulink(2, "TO-DO", "/main/todo"),
       new Menulink(3, "menu item 3", "/")
     ];
 
