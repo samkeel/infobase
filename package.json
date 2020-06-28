@@ -7,7 +7,7 @@
     "serve": "ng serve",
     "start": "SET DEBUG=true && electron .",
     "build": "ng build",
-    "build.prod": "ng build --prod --baseHref=./",
+    "build.prod": "ng build --prod --baseHref=./ && electron .",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

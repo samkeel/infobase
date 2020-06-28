@@ -18,7 +18,7 @@ function createWindow() {
     if (process.env.DEBUG) {
         win.loadURL(`http://localhost:4200`);
     } else {
-        win.loadURL(`file://${__dirname}/dist/integrate-angular/index.html`);
+        win.loadURL(`file://${__dirname}/dist/infobase/index.html`);
     }
 
     // Open the DevTools.
