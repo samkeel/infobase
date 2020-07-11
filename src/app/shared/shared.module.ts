@@ -21,6 +21,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { SideMenuComponent } from './shell/side-menu/side-menu.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const components = [
   ShellComponent
@@ -46,7 +47,8 @@ const matModules = [
   MatTreeModule,
   MatDialogModule,
   MatExpansionModule,
-  MatSelectModule
+  MatSelectModule,
+  MatTabsModule
 ];
 @NgModule({
   declarations: [
