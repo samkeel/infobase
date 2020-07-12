@@ -51,3 +51,10 @@ README2.md
 # Production builds
 /infobase-win32-x64
 /releases
+
+#custom ignore files
+environment.ts
+src/environments/environment.ts
+environment.prod.ts
+src/environments/environment.prod.ts
+/.vs
